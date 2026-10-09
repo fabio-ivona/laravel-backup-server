@@ -26,7 +26,7 @@ class FindFilesCommand extends Command
 
         $this->info("Searching all backups of `{$sourceName}` for files named `{$searchFor}`...");
 
-        if (! $source = Source::named($this->argument('sourceName'))->first()) {
+        if (! $source = config('backup-server.backup_source_model')::named($this->argument('sourceName'))->first()) {
             $this->info("Did not find a source named {$sourceName}");
 
             return true;

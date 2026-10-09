@@ -20,7 +20,7 @@ class CreateBackupCommand extends Command
     {
         $sourceName = $this->argument('sourceName');
 
-        $source = Source::firstWhere('name', $sourceName);
+        $source = config('backup-server.backup_source_model')::firstWhere('name', $sourceName);
 
         if (! $source) {
             $this->error("There is no source named `{$sourceName}`");
@@ -31,7 +31,7 @@ class CreateBackupCommand extends Command
         $this->info("Creating new backup for {$sourceName}...");
 
         $writeLogItemsToConsole = function (Backup $backup) {
-            Event::listen('eloquent.saving: '.BackupLogItem::class, function (BackupLogItem $backupLogItem) use ($backup) {
+            Event::listen('eloquent.saving: '.config('backup-server.backup_log_item_model'), function (BackupLogItem $backupLogItem) use ($backup) {
                 if ($backupLogItem->backup_id !== $backup->id) {
                     return;
                 }

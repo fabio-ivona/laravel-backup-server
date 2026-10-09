@@ -158,6 +158,23 @@ return [
     ],
 
     /*
+     * The fully qualified class name of the backup model
+     */
+    'backup_model' => \Spatie\BackupServer\Models\Backup::class,
+    /*
+     * The fully qualified class name of the backup log item model
+     */
+    'backup_log_item_model' => \Spatie\BackupServer\Models\BackupLogItem::class,
+    /*
+     * The fully qualified class name of the destination model
+     */
+    'backup_destination_model' => \Spatie\BackupServer\Models\Destination::class,
+    /*
+     * The fully qualified class name of the source model
+     */
+    'backup_source_model' => \Spatie\BackupServer\Models\Source::class,
+
+    /*
      * Here you can specify on which connection the backup server jobs will be dispatched.
      * Leave empty to use the app default's env('QUEUE_CONNECTION')
      */
