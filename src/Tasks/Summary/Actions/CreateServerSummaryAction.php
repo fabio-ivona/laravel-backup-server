@@ -4,10 +4,7 @@ namespace Spatie\BackupServer\Tasks\Summary\Actions;
 
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Builder;
-use Spatie\BackupServer\Models\Backup;
-use Spatie\BackupServer\Models\BackupLogItem;
 use Spatie\BackupServer\Models\Destination;
-use Spatie\BackupServer\Models\Source;
 use Spatie\BackupServer\Tasks\Summary\ServerSummary;
 
 class CreateServerSummaryAction

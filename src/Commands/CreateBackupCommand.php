@@ -6,7 +6,6 @@ use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Event;
 use Spatie\BackupServer\Models\Backup;
 use Spatie\BackupServer\Models\BackupLogItem;
-use Spatie\BackupServer\Models\Source;
 use Spatie\BackupServer\Support\Helpers\Enums\LogLevel;
 use Spatie\BackupServer\Tasks\Backup\Actions\CreateBackupAction;
 

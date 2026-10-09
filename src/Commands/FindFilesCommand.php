@@ -7,7 +7,6 @@ use Illuminate\Console\Command;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
 use Spatie\BackupServer\Models\Backup;
-use Spatie\BackupServer\Models\Source;
 use Spatie\BackupServer\Tasks\Search\FileSearchResult;
 
 class FindFilesCommand extends Command
